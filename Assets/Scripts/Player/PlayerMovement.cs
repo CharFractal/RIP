@@ -3,17 +3,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Transform newPlayerPosition;
     [SerializeField] private float speed;
     [SerializeField] private Transform mouseLocation;
+    [SerializeField] private Transform homePlanet;
     
-    private Rigidbody2D _rb2D;
     private bool _allowMovement;
-    private bool _allowInput;
+    private Vector3 _initPosition;
 
     private void Start()
     {
-        _rb2D = GetComponent<Rigidbody2D>();
+        _initPosition = transform.position;
     }
 
     public void TakeOff()
@@ -21,8 +20,19 @@ public class PlayerMovement : MonoBehaviour
         _allowMovement = true;
     }
 
+    public void Land()
+    {
+        _allowMovement = false;
+        transform.DOMove(_initPosition, .3f);
+    }
+
     private void Update()
     {
+        if (Vector3.Distance(homePlanet.position, transform.position) > 5f)
+        {
+            homePlanet.GetComponent<Collider2D>().enabled = true;
+        }
+        
         if (_allowMovement)
         {
             //_rb2D.velocity = transform.forward * speed * 5f;

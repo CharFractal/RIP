@@ -5,7 +5,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private Transform homeLocation;
     [SerializeField] private Transform galaxyLocation;
     [SerializeField] private float targetCamSize;
-
+    [SerializeField] private Transform player;
+    
     private bool _outsideHomePlanet;
     
     public void TakeOff()
@@ -24,6 +25,11 @@ public class CameraMovement : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, galaxyLocation.position, 3f * Time.deltaTime);
             Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, targetCamSize, 3f * Time.deltaTime);
+
+            var pos = galaxyLocation.position;
+            pos.x = player.position.x;
+            pos.y = player.position.y;
+            galaxyLocation.position = pos;
         }
         else
         {
