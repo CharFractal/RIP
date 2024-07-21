@@ -16,6 +16,11 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.CompareTag("Police"))
+        {
+            print("GAME END");
+        }
+        
         if (col.CompareTag("DropLocation"))
         {
             directionRing.SetActive(false);
