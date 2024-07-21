@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Home
+  - spawner
+  - otherPlanet
   layers:
   - Default
   - TransparentFX
