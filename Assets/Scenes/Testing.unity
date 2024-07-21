@@ -4235,10 +4235,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police
       objectReference: {fileID: 0}
-    - target: {fileID: 6305378371135699450, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
-      propertyPath: m_TagString
-      value: Police
-      objectReference: {fileID: 0}
     - target: {fileID: 7535257594323400660, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8609805
@@ -4283,14 +4279,6 @@ PrefabInstance:
       propertyPath: thana
       value: 
       objectReference: {fileID: 1771015737}
-    - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
-      propertyPath: Cycletime
-      value: 11.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
-      propertyPath: Waypoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
       propertyPath: Waypoints.Array.data[0]
       value: 
