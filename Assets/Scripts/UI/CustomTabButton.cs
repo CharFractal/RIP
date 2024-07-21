@@ -2,13 +2,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Image))]
 public class CustomTabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
     public TabGroup tabGroup;
-
     public Image background;
+    public UnityEvent OnTabSelected;
+    public UnityEvent OnTabDeselected;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -29,4 +31,5 @@ public class CustomTabButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
         background  =   GetComponent<Image>();
         tabGroup.Subscribe(this);
     }
+
 }
