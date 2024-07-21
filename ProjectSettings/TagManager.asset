@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Home
+  - DropLocation
   layers:
   - Default
   - TransparentFX

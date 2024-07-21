@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int pizzasAvailable = 1;
+    public int maxPizzaCapacity = 1;
+    
+    [SerializeField] private TMP_Text pizzasText;
+    [SerializeField] private GameObject outOfPizzas;
+    [SerializeField] private GameObject homeTarget;
+    
+    private string _textColor = "white";
+    
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (pizzasAvailable == 0)
+        {
+            homeTarget.SetActive(true);
+            _textColor = "red";
+            outOfPizzas.SetActive(true);
+        }
+        else
+        {
+            homeTarget.SetActive(false);
+            _textColor = "white";
+            outOfPizzas.SetActive(false);
+        }
+        pizzasText.text = "<color=" + _textColor + "><size=100>" + pizzasAvailable + "</size></color>" + "/" + maxPizzaCapacity;
     }
 }
