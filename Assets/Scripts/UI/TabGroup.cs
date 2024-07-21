@@ -29,6 +29,21 @@ public class TabGroup : MonoBehaviour
         }
     }
 
+    public void GotoInventory(){
+        Debug.Log("BUTTON CLICKEDFvnjfdkvdmnbd");
+        selectedTab = CustomTabButtons[3];
+        ResetTabs();
+        selectedTab.background.sprite = tabActive;
+        int index = selectedTab.transform.GetSiblingIndex();
+        for(int i = 0; i < ObjectsToSwap.Count; ++i){
+            if(i == index){
+                ObjectsToSwap[i].SetActive(true);
+            }
+            else{
+                ObjectsToSwap[i].SetActive(false);
+            }
+        }
+    }
 
     public void OnTabExit(CustomTabButton button)
     {
