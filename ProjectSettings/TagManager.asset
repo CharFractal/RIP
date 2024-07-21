@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Home
+  - spawner
+  - otherPlanet
+  - NPC
+  - Empty
+  - Police
   - DropLocation
   - PizzaShop
   - UpgradesShop
