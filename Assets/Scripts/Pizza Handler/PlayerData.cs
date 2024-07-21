@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    public int restaurantLevel = 1;
     public int pizzasAvailable = 1;
     public int maxPizzaCapacity = 1;
+    public int shields;
+    public int availableMoney = 200;
     
     [SerializeField] private TMP_Text pizzasText;
     [SerializeField] private GameObject outOfPizzas;

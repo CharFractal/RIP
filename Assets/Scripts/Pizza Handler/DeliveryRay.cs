@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeliveryRay : MonoBehaviour
 {
-    private PlayerMovement _player;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private DropLocationPlanets dropLocationPlanets;
     
+    private PlayerMovement _player;
+
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
