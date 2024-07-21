@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Home
+  - DropLocation
+  - PizzaShop
+  - UpgradesShop
   layers:
   - Default
   - TransparentFX
