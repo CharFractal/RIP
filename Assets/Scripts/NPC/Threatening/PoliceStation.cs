@@ -23,6 +23,7 @@ public class PoliceStation : MonoBehaviour
     public void reportToThana(GameObject lead)
     {
         Lead = lead;
+        Debug.Log(lead.name + " Leads");
         lead.GetComponent<Police>().state = Police.State.Shooting;
     }
 }

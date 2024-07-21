@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 44922239366452249}
   - component: {fileID: 2893450212734214324}
   - component: {fileID: 6773545158940801936}
-  - component: {fileID: 4831714139885004472}
   m_Layer: 0
   m_Name: Short-Lazer-Ship
   m_TagString: NPC
@@ -129,20 +128,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 7, y: 7}
   m_EdgeRadius: 0
---- !u!114 &4831714139885004472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642470325148432260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6b4c8cfaa341c4b8723e846be79867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6305378371135699450
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,5 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e3a19e7fa2217448274966361c2595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canKill: 0
   pathway: 0000000000000000
   Empty: {fileID: 456503121704979889, guid: 41dd325298bff314c85aa2b7f5d8833f, type: 3}

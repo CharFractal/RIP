@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class NPC : MonoBehaviour
 {
     private randomNPCSpawner Spawner;
+    public bool canKill = false;
     private int maxPlanets = 0;
     public int[] pathway = new int[2];
     [SerializeField] private GameObject Empty = default;
@@ -46,10 +47,5 @@ public class NPC : MonoBehaviour
     {
         transform.LookAt(MyEmpty.transform);
         transform.DOMove(MyEmpty.transform.position, Spawner.cycleLength).SetEase(Ease.InOutSine);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Destroy(gameObject);
     }
 }

@@ -1,20 +1,21 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class otherPlanet : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
-        Destroy(other);
-        Debug.Log("wow anadar");
-    }
-
-    private void Update()
-    {
-        Debug.Log("wow bahar");
+        if (other.CompareTag("NPC") && other.transform.parent != null )
+        {
+            if (other.transform.parent.GetComponent<NPC>().canKill == false)
+            {
+                other.transform.parent.GetComponent<NPC>().canKill = true;
+            }
+            else if (other.transform.parent.GetComponent<NPC>().canKill == true)
+            {
+                Destroy(other.transform.parent.gameObject);
+            }
+        }
     }
 }

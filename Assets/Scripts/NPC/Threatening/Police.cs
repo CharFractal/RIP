@@ -41,6 +41,7 @@ public class Police : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("OPYEEE MILLL GAYAAAA");
+            thana.reportToThana(gameObject);
         }
     }
 
