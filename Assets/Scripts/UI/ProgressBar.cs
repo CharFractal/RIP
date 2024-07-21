@@ -4,11 +4,9 @@ using UnityEngine.UI;
 [ExecuteInEditMode()]
 public class ProgressBar : MonoBehaviour
 {
-    public int Maximum;
-    public int Minimum;
-    public int Current;
+    [SerializeField]StatsControllerSO statsController;
     public Image Mask;
-
+    private
     void Start(){
 
     }
@@ -17,8 +15,8 @@ public class ProgressBar : MonoBehaviour
     }
 
     void GetCurrentFill(){
-        float currentOffset =   Current - Minimum;
-        float maximumOffset = Maximum - Minimum;
+        float currentOffset =   statsController.Current - statsController.Minimum;
+        float maximumOffset = statsController.Maximum - statsController.Minimum;
         float fillAmount = (float)currentOffset/(float)maximumOffset;
         Mask.fillAmount =   fillAmount;
     }
