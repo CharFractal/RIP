@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a43c019531a8418c9b0a6013f56360f, type: 3}
   m_Name: PizzaQuality
   m_EditorClassIdentifier: 
-  level: 5
+  level: 1
   maxLevel: 5
   levelIncrease: 10
   Maximum: 100
