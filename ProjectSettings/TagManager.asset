@@ -10,6 +10,9 @@ TagManager:
   - NPC
   - Empty
   - Police
+  - DropLocation
+  - PizzaShop
+  - UpgradesShop
   layers:
   - Default
   - TransparentFX
