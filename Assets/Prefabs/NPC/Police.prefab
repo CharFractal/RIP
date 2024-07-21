@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4d40fff6445152549abe0248cbb065e4, type: 3}
-  m_Color: {r: 0.5922725, g: 0.7735849, b: 0.10946945, a: 1}
+  m_Color: {r: 0.10980393, g: 0.40439, b: 0.77254903, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,9 +115,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7535257594323400660}
-  - component: {fileID: 5554629182059769133}
+  - component: {fileID: 8688983227201699072}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Police
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 44922239366452249}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
---- !u!114 &5554629182059769133
+--- !u!114 &8688983227201699072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,8 +148,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6305378371135699450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e3a19e7fa2217448274966361c2595, type: 3}
+  m_Script: {fileID: 11500000, guid: d186feab82dfed94ea04a7a7b203ead6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathway: 0000000000000000
-  Empty: {fileID: 456503121704979889, guid: 41dd325298bff314c85aa2b7f5d8833f, type: 3}

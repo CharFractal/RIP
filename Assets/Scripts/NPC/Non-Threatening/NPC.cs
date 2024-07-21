@@ -18,7 +18,6 @@ public class NPC : MonoBehaviour
     {
         Spawner = GameObject.FindWithTag("spawner").GetComponent<randomNPCSpawner>();
         maxPlanets = Spawner.otherPlantsPositions.Length;
-        Debug.Log(maxPlanets);
         int rand = Random.Range(0, maxPlanets);
         pathway[0] = Random.Range(0, maxPlanets);
         if (maxPlanets <= 1)
@@ -37,8 +36,6 @@ public class NPC : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Debug.Log(pathway[0]);
-        Debug.Log(pathway[1]);
         gameObject.transform.position = Spawner.otherPlantsPositions[pathway[0]];
         MyEmpty = Instantiate(Empty,
             new Vector3(Spawner.otherPlantsPositions[pathway[0]].x, Spawner.otherPlantsPositions[pathway[0]].y, 0f), Empty.transform.rotation);
@@ -49,5 +46,18 @@ public class NPC : MonoBehaviour
     {
         transform.LookAt(MyEmpty.transform);
         transform.DOMove(MyEmpty.transform.position, Spawner.cycleLength).SetEase(Ease.InOutSine);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnTriggerEnter called with: " + other.name);
+
+        // Check if the other collider is tagged as "Planet"
+        if (other.CompareTag("otherPlanet"))
+        {
+            Debug.Log("Collided with Planet");
+            // Destroy this GameObject
+            Destroy(gameObject);
+        }
     }
 }

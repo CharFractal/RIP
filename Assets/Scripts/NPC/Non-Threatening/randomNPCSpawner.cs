@@ -26,7 +26,6 @@ public class randomNPCSpawner : MonoBehaviour
         }
 
         timepool = time * 50;
-        Debug.Log("Timer Started");
     }
     
     private void FixedUpdate()
@@ -34,7 +33,6 @@ public class randomNPCSpawner : MonoBehaviour
         if (timepool == 0)
         {
             timepool = time * 50;
-            Debug.Log("timer endeed");
             NPCShips.Add(Instantiate(NPCShip, transform));
             NPCShips.ElementAt(timerCounter).name = timerCounter.ToString("D3") + " Ship";
             timerCounter++;

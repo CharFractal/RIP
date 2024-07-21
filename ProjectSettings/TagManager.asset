@@ -7,6 +7,7 @@ TagManager:
   - Home
   - spawner
   - otherPlanet
+  - NPC
   layers:
   - Default
   - TransparentFX
