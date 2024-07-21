@@ -8,6 +8,8 @@ TagManager:
   - spawner
   - otherPlanet
   - NPC
+  - Empty
+  - Police
   layers:
   - Default
   - TransparentFX

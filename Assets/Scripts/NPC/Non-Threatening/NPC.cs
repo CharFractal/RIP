@@ -48,16 +48,8 @@ public class NPC : MonoBehaviour
         transform.DOMove(MyEmpty.transform.position, Spawner.cycleLength).SetEase(Ease.InOutSine);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter called with: " + other.name);
-
-        // Check if the other collider is tagged as "Planet"
-        if (other.CompareTag("otherPlanet"))
-        {
-            Debug.Log("Collided with Planet");
-            // Destroy this GameObject
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }

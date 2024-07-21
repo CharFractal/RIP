@@ -2,18 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Police : MonoBehaviour
 {
+    public enum State  
+    {
+        Shooting,
+        Patrolling,
+        Following
+    }
     public List<Transform> Waypoints = new List<Transform>();
+    public State state = State.Patrolling;
+    [SerializeField]private PoliceStation thana; 
     [SerializeField]private float Cycletime = 0f;
 
     void Start()
     {
         if (Waypoints == null || Waypoints.Count < 2)
         {
-            Debug.LogError("Not enough Waypoints. least two Waypoints CHahiye");
             return;
         }
         Vector3[] pathPositions = new Vector3[Waypoints.Count];
@@ -21,17 +29,23 @@ public class Police : MonoBehaviour
         {
             pathPositions[i] = Waypoints[i].position;
         }
-        Debug.Log("Path positions: " + string.Join(", ", pathPositions));
-        transform.DOPath(pathPositions, Cycletime, PathType.CatmullRom) 
-            .SetOptions(true) 
-            .SetLoops(-1, LoopType.Restart) 
+        transform.DOPath(pathPositions, Cycletime, PathType.CatmullRom)
+            .SetOptions(true)
+            .SetLoops(-1, LoopType.Restart)
             .SetEase(Ease.Linear)
-            .SetLookAt(0f) 
-            .OnWaypointChange(OnWaypointChanged); 
+            .SetLookAt(0.05f);
     }
 
-    void OnWaypointChanged(int waypointIndex)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Reached waypoint: " + waypointIndex);
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("OPYEEE MILLL GAYAAAA");
+        }
+    }
+
+    private void Update()
+    {
+        Debug.Log(gameObject.name + " is " + state);
     }
 }

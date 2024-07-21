@@ -1344,7 +1344,7 @@ GameObject:
   - component: {fileID: 701515877}
   m_Layer: 0
   m_Name: Player Spaceship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1631,6 +1631,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1779933661}
     m_Modifications:
+    - target: {fileID: 2665245021815939909, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
+      propertyPath: m_Radius
+      value: 9.599999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665245021815939909, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5580022395163720007, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.7
@@ -1694,6 +1702,14 @@ PrefabInstance:
     - target: {fileID: 2198569616848808171, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665245021815939909, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
+      propertyPath: m_Radius
+      value: 9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665245021815939909, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5580022395163720007, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2412,11 +2428,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4101266028994627651, guid: ede5c114fc3639a46916aa81c2583552, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3436627
+      value: 4.19
       objectReference: {fileID: 0}
     - target: {fileID: 4101266028994627651, guid: ede5c114fc3639a46916aa81c2583552, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.791008
+      value: 7.67
       objectReference: {fileID: 0}
     - target: {fileID: 4101266028994627651, guid: ede5c114fc3639a46916aa81c2583552, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2768,7 +2784,7 @@ Transform:
   m_GameObject: {fileID: 1126547357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.11, y: 0.95, z: 0}
+  m_LocalPosition: {x: -1.77, y: -8.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2939,6 +2955,14 @@ PrefabInstance:
     - target: {fileID: 2198569616848808171, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665245021815939909, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
+      propertyPath: m_Radius
+      value: 9.599999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665245021815939909, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5580022395163720007, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4148,6 +4172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police
       objectReference: {fileID: 0}
+    - target: {fileID: 6305378371135699450, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
+      propertyPath: m_TagString
+      value: Police
+      objectReference: {fileID: 0}
     - target: {fileID: 7535257594323400660, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8609805
@@ -4188,6 +4216,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
+      propertyPath: thana
+      value: 
+      objectReference: {fileID: 1771015737}
     - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
       propertyPath: Cycletime
       value: 11.78
@@ -4798,6 +4830,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7307961450746297943, guid: cebab5c0302aa0f4da2fdd448d6c334b, type: 3}
   m_PrefabInstance: {fileID: 738014689}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1771015734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771015736}
+  - component: {fileID: 1771015737}
+  m_Layer: 0
+  m_Name: PoliceStation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1771015736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771015734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.64046293, y: 11.584655, z: -0.14987047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1771015737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771015734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5806091ba41ae564eb4a4d8ec800a840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lead: {fileID: 0}
 --- !u!1 &1778513631
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,6 +5674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6305378371135699450, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
+      propertyPath: m_TagString
+      value: Police
+      objectReference: {fileID: 0}
     - target: {fileID: 7535257594323400660, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1639166
@@ -5637,6 +5718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
+      propertyPath: thana
+      value: 
+      objectReference: {fileID: 1771015737}
     - target: {fileID: 8688983227201699072, guid: af31789c317f7a44bb0c834536fb782c, type: 3}
       propertyPath: Cycletime
       value: 6.02
@@ -6273,3 +6358,4 @@ SceneRoots:
   - {fileID: 1541019440}
   - {fileID: 1863428158}
   - {fileID: 837772331}
+  - {fileID: 1771015736}
