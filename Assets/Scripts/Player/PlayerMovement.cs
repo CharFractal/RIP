@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool landed;
     public float speed;
     public bool droppingPizza;
     public Planet tempPlanet;
@@ -13,13 +14,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator deliveringAnimation;
     [SerializeField] private Transform deliveryRay;
     [SerializeField] private Transform pivot;
+    [SerializeField] private AudioSource pizzaDeliverAudio;
+    [SerializeField] private AudioSource shipMoving;
+    [SerializeField] private AudioSource pickUpPizzaAudio;
     
     private bool _allowMovement;
     private Vector3 _initPosition;
     private Transform _targetDeliveryPlanet;
+    private bool _firstTrigger;
     
     public void DropPizza(Transform targetPlanet, Planet planet)
     {
+        pizzaDeliverAudio.Play();
         deliveringAnimation.transform.parent = null;
         tempPlanet = planet;
         _targetDeliveryPlanet = targetPlanet;
@@ -37,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
     {
         directionRing.SetActive(true);
         _allowMovement = true;
+        landed = false;
+        shipMoving.Play();
     }
 
     public void Land()
@@ -44,6 +52,12 @@ public class PlayerMovement : MonoBehaviour
         directionRing.SetActive(false);
         _allowMovement = false;
         transform.DOMove(_initPosition, .3f);
+        landed = true;
+        shipMoving.Stop();
+        if (_firstTrigger)
+            pickUpPizzaAudio.Play();
+        else
+            _firstTrigger = true;
     }
 
     private void Update()

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Home
   - DropLocation
+  - PizzaShop
+  - UpgradesShop
   layers:
   - Default
   - TransparentFX

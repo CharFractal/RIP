@@ -10,6 +10,7 @@ public class Planet : MonoBehaviour
     public DeliveryMeter deliveryMeter;
     
     [SerializeField] public Transform locationInPlane;
+    [SerializeField] private GameObject[] money;
     
     private void Start()
     {
@@ -21,5 +22,9 @@ public class Planet : MonoBehaviour
     public void DeliveredPizza()
     {
         orderPending = false;
+        // foreach (var moneyObj in money)
+        // {
+        //     moneyObj.SetActive(true);
+        // }
     }
 }

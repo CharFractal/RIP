@@ -10,6 +10,8 @@ public class DeliveryMeter : MonoBehaviour
     [SerializeField] private Planet planet;
     [SerializeField] private Transform deliveryText;
     [SerializeField] private Transform pivot;
+    [SerializeField] private GameObject deliverText;
+    [SerializeField] private GameObject noPizzasText;
     
     private PlayerMovement _playerMovement;
     private PlayerData _playerData;
@@ -23,9 +25,17 @@ public class DeliveryMeter : MonoBehaviour
     private void Update()
     {
         if (_playerData.pizzasAvailable == 0)
+        {
             GetComponent<Collider2D>().enabled = false;
+            noPizzasText.SetActive(true);
+            deliverText.SetActive(false);
+        }
         else
+        {
             GetComponent<Collider2D>().enabled = true;
+            noPizzasText.SetActive(false);
+            deliverText.SetActive(true);
+        }
         
         pivot.transform.up = Vector3.up;
     }
