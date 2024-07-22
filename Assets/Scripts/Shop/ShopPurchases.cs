@@ -13,7 +13,11 @@ public class ShopPurchases : MonoBehaviour
     [SerializeField] private GameObject deliveryButton;
     [SerializeField] private AudioSource upgradingRestaurant;
     [SerializeField] private GameObject[] shops;
-    
+    [SerializeField] private StatsControllerSO armorStats;
+    [SerializeField] private StatsControllerSO pizzaCapacity;
+    [SerializeField] private StatsControllerSO pizzaShopLevel;
+    [SerializeField] private GameObject shieldParent;
+    [SerializeField] private GameObject shield;
     
     public void IncreasePizzaCapacity()
     {
@@ -61,6 +65,7 @@ public class ShopPurchases : MonoBehaviour
         {
             playerData.availableMoney -= shieldsCost;
             playerData.shields++;
+            Instantiate(shield, shieldParent.transform);
         }
     }
 }
