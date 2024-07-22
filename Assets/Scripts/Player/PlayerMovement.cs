@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _initPosition;
     private Transform _targetDeliveryPlanet;
     private bool _firstTrigger;
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
+    }
     
     public void DropPizza(Transform targetPlanet, Planet planet)
     {
